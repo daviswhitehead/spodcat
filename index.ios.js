@@ -4,4 +4,4 @@ import React, {
 
 import MainView from './main.js';
 
-AppRegistry.registerComponent('AwesomeProject', () => MainView);
+AppRegistry.registerComponent('spodcat', () => MainView);
