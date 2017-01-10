@@ -24,8 +24,19 @@
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		612F0A561E22D5FA00C64AA8 /* libRNSound.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 612F0A551E22D57B00C64AA8 /* libRNSound.a */; };
-		612F0A581E22D68A00C64AA8 /* superintelligence.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 612F0A571E22D68A00C64AA8 /* superintelligence.mp3 */; };
-		612F0A5A1E22DBBF00C64AA8 /* Politics is the Mind-Killer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 612F0A591E22DBBF00C64AA8 /* Politics is the Mind-Killer.mp3 */; };
+		61DAA3341E2336C600874E8A /* 01 Intro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 61DAA3271E2336C600874E8A /* 01 Intro.mp3 */; };
+		61DAA3351E2336C600874E8A /* 01 Make Light.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 61DAA3281E2336C600874E8A /* 01 Make Light.mp3 */; };
+		61DAA3361E2336C600874E8A /* 01 Orange Shirt.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 61DAA3291E2336C600874E8A /* 01 Orange Shirt.mp3 */; };
+		61DAA3371E2336C600874E8A /* 01 Southern Point.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 61DAA32A1E2336C600874E8A /* 01 Southern Point.m4a */; };
+		61DAA3381E2336C600874E8A /* 02 Let's Go Surfing.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 61DAA32B1E2336C600874E8A /* 02 Let's Go Surfing.m4a */; };
+		61DAA3391E2336C600874E8A /* 02 Silver Soul.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 61DAA32C1E2336C600874E8A /* 02 Silver Soul.mp3 */; };
+		61DAA33A1E2336C600874E8A /* 02 Swim.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 61DAA32D1E2336C600874E8A /* 02 Swim.mp3 */; };
+		61DAA33B1E2336C600874E8A /* 03 Silvia.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 61DAA32E1E2336C600874E8A /* 03 Silvia.m4a */; };
+		61DAA33C1E2336C600874E8A /* 05 ONE.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 61DAA32F1E2336C600874E8A /* 05 ONE.mp3 */; };
+		61DAA33D1E2336C600874E8A /* 06 Bluish.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 61DAA3301E2336C600874E8A /* 06 Bluish.m4a */; };
+		61DAA33E1E2336C600874E8A /* 11 Stars.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 61DAA3311E2336C600874E8A /* 11 Stars.mp3 */; };
+		61DAA33F1E2336C600874E8A /* politics.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 61DAA3321E2336C600874E8A /* politics.mp3 */; };
+		61DAA3401E2336C600874E8A /* superintelligence.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 61DAA3331E2336C600874E8A /* superintelligence.mp3 */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 /* End PBXBuildFile section */
 
@@ -243,8 +254,19 @@
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		612F0A501E22D57B00C64AA8 /* RNSound.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNSound.xcodeproj; path = "../node_modules/react-native-sound/RNSound.xcodeproj"; sourceTree = "<group>"; };
-		612F0A571E22D68A00C64AA8 /* superintelligence.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = superintelligence.mp3; path = ../../../../../Downloads/superintelligence.mp3; sourceTree = "<group>"; };
-		612F0A591E22DBBF00C64AA8 /* Politics is the Mind-Killer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Politics is the Mind-Killer.mp3"; path = "../Politics is the Mind-Killer.mp3"; sourceTree = "<group>"; };
+		61DAA3271E2336C600874E8A /* 01 Intro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "01 Intro.mp3"; path = "../mp3s/01 Intro.mp3"; sourceTree = "<group>"; };
+		61DAA3281E2336C600874E8A /* 01 Make Light.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "01 Make Light.mp3"; path = "../mp3s/01 Make Light.mp3"; sourceTree = "<group>"; };
+		61DAA3291E2336C600874E8A /* 01 Orange Shirt.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "01 Orange Shirt.mp3"; path = "../mp3s/01 Orange Shirt.mp3"; sourceTree = "<group>"; };
+		61DAA32A1E2336C600874E8A /* 01 Southern Point.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "01 Southern Point.m4a"; path = "../mp3s/01 Southern Point.m4a"; sourceTree = "<group>"; };
+		61DAA32B1E2336C600874E8A /* 02 Let's Go Surfing.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "02 Let's Go Surfing.m4a"; path = "../mp3s/02 Let's Go Surfing.m4a"; sourceTree = "<group>"; };
+		61DAA32C1E2336C600874E8A /* 02 Silver Soul.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "02 Silver Soul.mp3"; path = "../mp3s/02 Silver Soul.mp3"; sourceTree = "<group>"; };
+		61DAA32D1E2336C600874E8A /* 02 Swim.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "02 Swim.mp3"; path = "../mp3s/02 Swim.mp3"; sourceTree = "<group>"; };
+		61DAA32E1E2336C600874E8A /* 03 Silvia.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "03 Silvia.m4a"; path = "../mp3s/03 Silvia.m4a"; sourceTree = "<group>"; };
+		61DAA32F1E2336C600874E8A /* 05 ONE.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "05 ONE.mp3"; path = "../mp3s/05 ONE.mp3"; sourceTree = "<group>"; };
+		61DAA3301E2336C600874E8A /* 06 Bluish.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "06 Bluish.m4a"; path = "../mp3s/06 Bluish.m4a"; sourceTree = "<group>"; };
+		61DAA3311E2336C600874E8A /* 11 Stars.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "11 Stars.mp3"; path = "../mp3s/11 Stars.mp3"; sourceTree = "<group>"; };
+		61DAA3321E2336C600874E8A /* politics.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = politics.mp3; path = ../mp3s/politics.mp3; sourceTree = "<group>"; };
+		61DAA3331E2336C600874E8A /* superintelligence.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = superintelligence.mp3; path = ../mp3s/superintelligence.mp3; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -360,9 +382,20 @@
 		13B07FAE1A68108700A75B9A /* AwesomeProject */ = {
 			isa = PBXGroup;
 			children = (
+				61DAA3271E2336C600874E8A /* 01 Intro.mp3 */,
+				61DAA3281E2336C600874E8A /* 01 Make Light.mp3 */,
+				61DAA3291E2336C600874E8A /* 01 Orange Shirt.mp3 */,
+				61DAA32A1E2336C600874E8A /* 01 Southern Point.m4a */,
+				61DAA32B1E2336C600874E8A /* 02 Let's Go Surfing.m4a */,
+				61DAA32C1E2336C600874E8A /* 02 Silver Soul.mp3 */,
+				61DAA32D1E2336C600874E8A /* 02 Swim.mp3 */,
+				61DAA32E1E2336C600874E8A /* 03 Silvia.m4a */,
+				61DAA32F1E2336C600874E8A /* 05 ONE.mp3 */,
+				61DAA3301E2336C600874E8A /* 06 Bluish.m4a */,
+				61DAA3311E2336C600874E8A /* 11 Stars.mp3 */,
+				61DAA3321E2336C600874E8A /* politics.mp3 */,
+				61DAA3331E2336C600874E8A /* superintelligence.mp3 */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
-				612F0A591E22DBBF00C64AA8 /* Politics is the Mind-Killer.mp3 */,
-				612F0A571E22D68A00C64AA8 /* superintelligence.mp3 */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -784,9 +817,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				612F0A5A1E22DBBF00C64AA8 /* Politics is the Mind-Killer.mp3 in Resources */,
-				612F0A581E22D68A00C64AA8 /* superintelligence.mp3 in Resources */,
+				61DAA3341E2336C600874E8A /* 01 Intro.mp3 in Resources */,
+				61DAA3391E2336C600874E8A /* 02 Silver Soul.mp3 in Resources */,
+				61DAA3361E2336C600874E8A /* 01 Orange Shirt.mp3 in Resources */,
+				61DAA3401E2336C600874E8A /* superintelligence.mp3 in Resources */,
+				61DAA33B1E2336C600874E8A /* 03 Silvia.m4a in Resources */,
+				61DAA33A1E2336C600874E8A /* 02 Swim.mp3 in Resources */,
+				61DAA33D1E2336C600874E8A /* 06 Bluish.m4a in Resources */,
+				61DAA3351E2336C600874E8A /* 01 Make Light.mp3 in Resources */,
+				61DAA3381E2336C600874E8A /* 02 Let's Go Surfing.m4a in Resources */,
+				61DAA33F1E2336C600874E8A /* politics.mp3 in Resources */,
+				61DAA33C1E2336C600874E8A /* 05 ONE.mp3 in Resources */,
+				61DAA3371E2336C600874E8A /* 01 Southern Point.m4a in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				61DAA33E1E2336C600874E8A /* 11 Stars.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

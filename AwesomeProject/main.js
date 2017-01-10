@@ -1,54 +1,3 @@
-// 'use strict';
-//
-// import React, {
-//   Component
-// } from 'react';
-// import {
-//   StyleSheet,
-//   Text,
-//   TouchableOpacity,
-//   View
-// } from 'react-native';
-// var Sound = require('react-native-sound');
-//
-// class MainView extends Component {
-//   render() {
-//     return <View style={styles.container}>
-//              <TouchableOpacity onPress={this.playSound}>
-//                <Text style={styles.button}>play</Text>
-//              </TouchableOpacity>
-//            </View>;
-//   }
-//
-//   playSound() {
-//     var s = new Sound('advertising.mp3', Sound.MAIN_BUNDLE, (e) => {
-//       if (e) {
-//         console.log('error', e);
-//       } else {
-//         console.log('duration', s.getDuration());
-//         s.play();
-//       }
-//     });
-//   }
-// }
-//
-// var styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     flexDirection: 'column',
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//   },
-//   button: {
-//     fontSize: 20,
-//     backgroundColor: 'silver',
-//     padding: 5,
-//   },
-// });
-//
-// export default MainView;
-
-
 'use strict';
 
 import React, {
@@ -63,27 +12,27 @@ import {
 var Sound = require('react-native-sound');
 
 class MainView extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {play_status: true};
-  //
-  //   // // Toggle the state every second
-  //   // setInterval(() => {
-  //   //   this.setState({ showText: !this.state.showText });
-  //   // }, 1000);
-  // }
+  constructor() {
+    super();
+    this.state = {
+      playing: true,
+      s: this.loadSound('Politics is the Mind-Killer.mp3')
+    };
+
+  }
 
   render() {
+    let display = this.state.playing ? 'Play' : 'Paused';
     return <View style={styles.container}>
              <TouchableOpacity onPress={this.playSound}>
-               <Text style={styles.button}>play</Text>
+               <Text style={styles.button}> {display}</Text>
              </TouchableOpacity>
            </View>;
   }
 
-  loadSound = (filename) => {
-    var s = new Sound(
-      filename,
+  loadSound = (soundfile) => {
+    let s = new Sound(
+      soundfile,
       Sound.MAIN_BUNDLE,
       (error) => {
         if (error) {
@@ -98,14 +47,29 @@ class MainView extends Component {
     return s;
   }
 
-  playSound = (s) => {
-    var mp3_file = 'Politics is the Mind-Killer.mp3'
-    console.log(mp3_file)
-    var s = this.loadSound(mp3_file);
-    console.log(s)
-    s.play();
-    console.log(s)
-  };
+  playSound = () => {
+    let s = this.state.s
+    console.log(this.state);
+    if (this.state.playing) {
+      s.play((success) => {
+        if(success) {
+          console.log('successfully finished playing');
+        }  else {
+          console.log('playback failed due to audio decoding errors');
+        }
+      });
+    } else {
+      s.pause((success) => {
+        if(success) {
+          console.log('successfully finished playing');
+        }  else {
+          console.log('playback failed due to audio decoding errors');
+        }
+      });
+    }
+    this.setState({ playing: !this.state.playing });
+    console.log(this.state);
+  }
 }
 
 var styles = StyleSheet.create({
