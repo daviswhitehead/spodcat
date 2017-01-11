@@ -16,7 +16,7 @@ class MainView extends Component {
     super();
     this.state = {
       playing: true,
-      s: this.loadSound('01 Orange Shirt.mp3')
+      s: this.loadSound('05 ONE.mp3')
     };
 
   }
