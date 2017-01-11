@@ -9,7 +9,8 @@ import {
   StyleSheet,
   Text,
   View,
-  Dimensions
+  Dimensions,
+  TouchableOpacity
 } from 'react-native';
 
 // dynamic sizing
@@ -22,16 +23,19 @@ let otherFactor = resizeFactor * 2
 export default class NowPlayingButtonTray extends Component {
   render() {
     return (
-      <View style={[styles.tray]}>
-        <View style={[styles.previous]} />
-        <View style={[styles.playPauseButton]} >
-          <View style={[styles.playPauseTriangle]} />
-         </View>
-        <View style={[styles.next]} />
+      <View style={styles.tray}>
+        <View style={styles.previous} />
+        <TouchableOpacity style={styles.playPauseButton} >
+
+          <View style={styles.playPauseTriangle} />
+         </TouchableOpacity>
+        <View style={styles.next} />
       </View>
     );
   }
 }
+
+// <View style={styles.playPauseCircle} />
 
 const styles = StyleSheet.create({
   tray: {
@@ -41,6 +45,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   playPauseButton: {
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: windowWidth / playPauseFactor,
+    height: windowWidth / playPauseFactor,
+    borderWidth: 2,
+    // borderHeight: windowWidth / playPauseFactor,
+    borderRadius: windowWidth / (playPauseFactor * 2),
+    backgroundColor: 'transparent',
+    borderColor: 'grey',
+    // borderTopColor: 'grey',
+  },
+  playPauseCircle: {
     width: windowWidth / playPauseFactor,
     height: windowWidth / playPauseFactor,
     borderRadius: windowWidth / (playPauseFactor * 2),
@@ -57,10 +74,8 @@ const styles = StyleSheet.create({
     borderTopColor: 'transparent',
     borderBottomColor: 'transparent',
     borderLeftColor: 'blue',
-    // flex: 1,
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
+    borderRadius: 10,
+    marginLeft: 10,
   },
   next: {
     width: windowWidth / otherFactor,
