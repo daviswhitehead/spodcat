@@ -5,4 +5,4 @@ import React, {
 // import MainView from './main.js';
 import NowPlaying from './scenes/NowPlaying.js';
 
-AppRegistry.registerComponent('spodcat', () => NowPlaying);
+AppRegistry.registerComponent('spodcat', () => NowPlaying)

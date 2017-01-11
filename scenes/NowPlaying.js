@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 // custom imports
 import PlayPauseButton from '../components/PlayPauseButton.js';
+import NowPlayingButtonTray from '../components/NowPlayingButtonTray.js';
 
 var Sound = require('react-native-sound');
 
@@ -20,22 +21,15 @@ class NowPlaying extends Component {
     super();
     this.state = {
       playing: true,
-      s: this.loadSound('05 ONE.mp3')
+      s: this.loadSound('01 Southern Point.m4a')
     };
   }
 
   render() {
     let display = this.state.playing ? 'Play' : 'Paused';
-    return <View style={styles.container}>
-             <TouchableOpacity onPress={this.playSound}>
-               <Text style={styles.button}> {display}</Text>
-             </TouchableOpacity>
-              <PlayPauseButton
-                // onPress={onPressLearnMore}
-                title="Learn More"
-                color="#841584"
-                accessibilityLabel="Learn more about this purple button"
-              />
+    return <View style={[styles.page]}>
+              <NowPlayingButtonTray>
+              </NowPlayingButtonTray>
            </View>;
   }
 
@@ -82,6 +76,12 @@ class NowPlaying extends Component {
 }
 
 var styles = StyleSheet.create({
+  page: {
+    flex: 1,
+    // backgroundColor: 'grey',
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
   container: {
     flex: 1,
     flexDirection: 'column',
@@ -93,6 +93,15 @@ var styles = StyleSheet.create({
     backgroundColor: 'silver',
     padding: 5,
   },
+  title: {
+    // flex: 10,
+    flexDirection: 'column',
+    fontSize: 20,
+  },
+  tray: {
+    // flex: 5,
+    flexDirection: 'column',
+  }
 });
 
 export default NowPlaying;
