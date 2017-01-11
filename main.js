@@ -14,25 +14,40 @@ var Sound = require('react-native-sound');
 class MainView extends Component {
   constructor() {
     super();
+    let files = ['01 Southern Point.m4a',
+                 '02 Silver Soul.mp3',
+                 '05 ONE.mp3'];
+    let songs = this.loadSounds(files);
     this.state = {
-      playing: true,
-      s: this.loadSound('05 ONE.mp3')
+      playing: false,
+      files: files,
+      songs: songs,
+      currentSong: 0
     };
-
   }
 
   render() {
-    let display = this.state.playing ? 'Play' : 'Paused';
+    let display = !this.state.playing ? 'Play' : 'Pause';
+    let index = this.state.currentSong
     return <View style={styles.container}>
+             <Text>{this.state.files[index]}</Text>
              <TouchableOpacity onPress={this.playSound}>
-               <Text style={styles.button}> {display}</Text>
+               <Text style={styles.button}>{display}</Text>
+             </TouchableOpacity>
+             <TouchableOpacity onPress={this.nextSong}>
+               <Text style={styles.button}>Next</Text>
+             </TouchableOpacity>
+             <TouchableOpacity onPress={this.previousSong}>
+               <Text style={styles.button}>Previous</Text>
              </TouchableOpacity>
            </View>;
   }
 
-  loadSound = (soundfile) => {
-    let s = new Sound(
-      soundfile,
+  loadSounds = (files) => {
+    let songs = [];
+    for (let i = 0; i < files.length - 1; i++) {
+      let s = new Sound(
+      files[i],
       Sound.MAIN_BUNDLE,
       (error) => {
         if (error) {
@@ -44,13 +59,14 @@ class MainView extends Component {
           );
         }
     });
-    return s;
+      songs.push(s);
+    }
+    return songs;
   }
 
   playSound = () => {
-    let s = this.state.s
-    console.log(this.state);
-    if (this.state.playing) {
+    let s = this.state.songs[this.state.currentSong];
+    if (!this.state.playing) {
       s.play((success) => {
         if(success) {
           console.log('successfully finished playing');
@@ -67,8 +83,26 @@ class MainView extends Component {
         }
       });
     }
-    this.setState({ playing: !this.state.playing });
-    console.log(this.state);
+    this.setState({ playing: !this.state.playing});
+  }
+
+  nextSong = () => {
+    let oldSong = this.state.songs[this.state.currentSong];
+    oldSong.stop();
+    if (this.state.currentSong < this.state.songs.length) {
+      let newSong = this.state.songs[this.state.currentSong + 1];
+      newSong.play();
+      this.setState({currentSong: this.state.currentSong + 1})
+    }
+  }
+  previousSong = () => {
+    let oldSong = this.state.songs[this.state.currentSong];
+    oldSong.stop();
+    if (this.state.currentSong > 0) {
+      let newSong = this.state.songs[this.state.currentSong - 1];
+      newSong.play();
+      this.setState({currentSong: this.state.currentSong - 1})
+    }
   }
 }
 
