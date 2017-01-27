@@ -9,6 +9,7 @@
   "dependencies": {
     "react": "15.4.2",
     "react-native": "0.40.0",
+    "react-native-audio-streaming": "^2.3.1",
     "react-native-audioplayer": "^0.2.0",
     "react-native-sound": "^0.8.3",
     "react-native-vector-icons": "^4.0.0"
