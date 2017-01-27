@@ -10,6 +10,7 @@ import {
   View
 } from 'react-native';
 var Sound = require('react-native-sound');
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 class MainView extends Component {
   constructor() {
@@ -27,19 +28,24 @@ class MainView extends Component {
   }
 
   render() {
-    let display = !this.state.playing ? 'Play' : 'Pause';
+    let playButton = !this.state.playing ? 'play' : 'pause';
     let index = this.state.currentSong
+    console.log(this.playSound)
     return <View style={styles.container}>
-             <Text>{this.state.files[index]}</Text>
-             <TouchableOpacity onPress={this.playSound}>
-               <Text style={styles.button}>{display}</Text>
-             </TouchableOpacity>
-             <TouchableOpacity onPress={this.nextSong}>
-               <Text style={styles.button}>Next</Text>
-             </TouchableOpacity>
-             <TouchableOpacity onPress={this.previousSong}>
-               <Text style={styles.button}>Previous</Text>
-             </TouchableOpacity>
+          <TouchableOpacity onPress={this.playSound}>
+            <Icon name={playButton} size={30}>
+            </Icon>
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={this.nextSong}>
+            <Icon name="forward" size={30}>
+            </Icon>
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={this.previousSong}>
+            <Icon name="backward" size={30}>
+            </Icon>
+          </TouchableOpacity>
            </View>;
   }
 

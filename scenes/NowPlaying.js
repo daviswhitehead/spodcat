@@ -13,6 +13,7 @@ import {
 // custom imports
 import PlayPauseButton from '../components/PlayPauseButton.js';
 import NowPlayingButtonTray from '../components/NowPlayingButtonTray.js';
+import PlayButton from '../components/PlayButton.js';
 
 var Sound = require('react-native-sound');
 
@@ -25,11 +26,16 @@ class NowPlaying extends Component {
     };
   }
 
+  // render() {
+  //   let display = this.state.playing ? 'Play' : 'Paused';
+  //   return <View style={[styles.page]}>
+  //             <NowPlayingButtonTray>
+  //             </NowPlayingButtonTray>
+  //          </View>;
+  // }
   render() {
-    let display = this.state.playing ? 'Play' : 'Paused';
     return <View style={[styles.page]}>
-              <NowPlayingButtonTray>
-              </NowPlayingButtonTray>
+              <PlayButton></PlayButton>
            </View>;
   }
 

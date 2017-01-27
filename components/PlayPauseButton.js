@@ -14,6 +14,8 @@ import {
   Dimensions
 } from 'react-native';
 
+require("react-native-fontawesome")
+
 // dynamic sizing
 let windowHeight = Dimensions.get('window').height;
 let windowWidth = Dimensions.get('window').width;
